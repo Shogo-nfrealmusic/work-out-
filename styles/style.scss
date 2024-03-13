@@ -1,8 +1,90 @@
-$cWhite: white;
+@use 'appear';
+@use 'button';
 @use 'text-animation';
+@use 'mobile-menu';
+@use 'globals' as *;
+@use 'image-slide';
+@use 'common' as *;
 
 body {
     font-family: 'Kameron', 'Noto Sans JP', sans-serif;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @extend .content-width;
+    }
+
+    &__nav {
+        @extend .flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+
+        display: none;
+        @include mq(lg) {
+            display: block;
+        }
+    }
+
+    &__ul {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+    }
+
+    &__li {
+        margin: 10px;
+
+        @include mq(md) {
+            margin-left: 0;
+            margin-right: 30px;
+        }
+
+        & > a {
+            color: $cBlack;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+    }
+
+    & > .logo {
+        justify-content: center;
+
+        @include mq(md) {
+            justify-content: flex-start;
+        }
+    }
+}
+
+.logo {
+    font-size: 42px;
+    display: flex;
+
+    &__img {
+        width: 0.7em;
+    }
+
+    &__stay {
+        font-weight: bold;
+    }
+    &__Healthy {
+        font-weight: bold;
+    }
 }
 
 .hero {
