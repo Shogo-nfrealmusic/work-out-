@@ -8,6 +8,7 @@
 
 body {
     font-family: 'Kameron', 'Noto Sans JP', sans-serif;
+    background-color: $cBlack;
 }
 
 #container {
@@ -29,7 +30,7 @@ body {
     z-index: 100;
 
     &.triggered {
-        background: rgba(255, 255, 255, 0.8);
+        background: rgba(58, 55, 55, 0.8);
         box-shadow: 10px 0 25px -10px rgba(0, 0, 0, 0.5);
     }
 
@@ -125,6 +126,7 @@ body {
     height: 100vh;
     position: relative;
     overflow: hidden;
+    background-color: $cBlack;
 }
 
 .hero > strong {
@@ -215,6 +217,60 @@ body {
           height: 105%;
           visibility: visible;
           object-fit: cover;
+}
+.top-margin {
+    width: 100%;
+    height: 20px;
+    background-color: $cBlack;
+    @include mq(md) {
+        height: 70px;
+    }
+}
+
+.home {
+    @extend .mb-lg;
+    background-color: $cBlack;
+    // margin-top: 20px;
+    &__inner {
+        @extend .flex;
+        // padding: 15px;
+
+        @include mq(md) {
+            // padding: 50px;
+            // margin-top: 70px;
+        }
+        @include mq(lg) {
+            // padding: 50px 150px;
+        }
+    }
+
+    &__img {
+        & > img {
+            opacity: 1;
+        }
+    }
+
+    &__texts {
+        @include mq(md) {
+            display: flex;
+            align-items: flex-end;
+        }
+    }
+
+    &__title {
+        color: $cWhite;
+        font-size: 40px;
+    }
+
+    &__sub {
+        color: $cWhite;
+        font-size: 35px;
+    }
+
+    &__description {
+        color: $cWhite;
+        font-size: 20px;
+    }
 }
 
 

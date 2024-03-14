@@ -72,13 +72,13 @@
   box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
 }
 .btn.filled {
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
   box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
 }
 .btn.filled:hover {
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
   box-shadow: none;
 }
 .btn.letter-spacing:hover {
@@ -563,11 +563,11 @@ img {
   margin-bottom: 16px !important;
 }
 
-.mb-lg {
+.mb-lg, .home {
   margin-bottom: 80px !important;
 }
 @media screen and (min-width: 960px) {
-  .mb-lg {
+  .mb-lg, .home {
     margin-bottom: 150px !important;
   }
 }
@@ -591,12 +591,12 @@ img {
   max-width: 1070px;
 }
 
-.flex, .header__nav {
+.flex, .header__nav, .home__inner {
   display: flex;
   flex-direction: column;
 }
 @media screen and (min-width: 600px) {
-  .flex, .header__nav {
+  .flex, .header__nav, .home__inner {
     flex-direction: row;
     flex-wrap: wrap;
   }
@@ -654,6 +654,7 @@ img {
 
 body {
   font-family: "Kameron", "Noto Sans JP", sans-serif;
+  background-color: black;
 }
 
 #container {
@@ -675,7 +676,7 @@ body {
   z-index: 100;
 }
 .header.triggered {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(58, 55, 55, 0.8);
   box-shadow: 10px 0 25px -10px rgba(0, 0, 0, 0.5);
 }
 .header__inner {
@@ -763,6 +764,7 @@ body {
   height: 100vh;
   position: relative;
   overflow: hidden;
+  background-color: black;
 }
 
 .hero > strong {
@@ -858,4 +860,40 @@ body {
   visibility: visible;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.top-margin {
+  width: 100%;
+  height: 20px;
+  background-color: black;
+}
+@media screen and (min-width: 600px) {
+  .top-margin {
+    height: 70px;
+  }
+}
+
+.home {
+  background-color: black;
+}
+.home__img > img {
+  opacity: 1;
+}
+@media screen and (min-width: 600px) {
+  .home__texts {
+    display: flex;
+    align-items: flex-end;
+  }
+}
+.home__title {
+  color: white;
+  font-size: 40px;
+}
+.home__sub {
+  color: white;
+  font-size: 35px;
+}
+.home__description {
+  color: white;
+  font-size: 20px;
 }/*# sourceMappingURL=style.css.map */
