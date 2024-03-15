@@ -95,3 +95,11 @@ img {
   @extend .mb-sm;
   color: $cSubTitle;
 }
+
+.main-title2 {
+  color: $cWhite;
+  @extend .font-lg;
+  font-weight: 600;
+  margin-bottom: 0;
+  display: block;
+}
