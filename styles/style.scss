@@ -299,7 +299,9 @@ main {
 
     &__inner {
         @extend .flex;
-        flex-direction: row-reverse;
+        @include mq(md) {
+            flex-direction: row-reverse;
+        }
     }
 
     &__title {

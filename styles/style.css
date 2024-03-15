@@ -934,8 +934,10 @@ main {
 .work {
   background-color: black;
 }
-.work__inner {
-  flex-direction: row-reverse;
+@media screen and (min-width: 600px) {
+  .work__inner {
+    flex-direction: row-reverse;
+  }
 }
 .work__title {
   margin-bottom: 60px;
