@@ -13,7 +13,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #eaebe6;
+    background-color: #322f2f;
     opacity: 0;
   }
   &.inview {
@@ -104,12 +104,12 @@
     );
   }
   &:hover::before {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(11, 11, 11, 0.959);
   }
 }
 
 .bg-img-zoom {
-  background-image: url(images/image-1.jpg);
+  // background-image: url(images/image-1.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

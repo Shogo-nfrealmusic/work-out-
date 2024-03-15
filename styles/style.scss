@@ -18,6 +18,10 @@ body {
     background: $cWhite;
 }
 
+main {
+    background-color: $cBlack;
+}
+
 .header {
     position: fixed;
     top: 0;
@@ -236,6 +240,11 @@ body {
         justify-content: space-between;
     }
 
+    &__title {
+        margin-bottom: 60px;
+        text-decoration: underline;
+    }
+
     &__img {
         // height: 300px;
         @extend .mb-sm;
@@ -280,6 +289,66 @@ body {
         font-size: 20px;
         @include mq(lg) {
             margin-bottom: 40px;
+        }
+    }
+}
+
+.work {
+    @extend .mb-lg;
+    background-color: $cBlack;
+
+    &__inner {
+        @extend .flex;
+        flex-direction: row-reverse;
+    }
+
+    &__title {
+        margin-bottom: 60px;
+        text-decoration: underline;
+    }
+
+    &__img {
+        @extend .pb-sm;
+        @include mq(md) {
+            display: flex;
+            align-items: center;
+            flex-basis: 48%;
+            padding-right: 20px;
+        }
+
+        & > img {
+            opacity: 1;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__texts {
+        @extend .pb-sm;
+        @include mq(md) {
+            display: flex;
+            align-items: center;
+            flex-basis: 40%;
+            padding-right: 20px;
+        }
+    }
+
+    &__title {
+        color: $cWhite;
+        font-size: 40px;
+    }
+
+    &__sub {
+        color: $cWhite;
+        font-size: 35px;
+    }
+
+    &__description {
+        color: $cWhite;
+        font-size: 20px;
+        @include mq(lg) {
+            margin-bottom: 20px;
         }
     }
 }
