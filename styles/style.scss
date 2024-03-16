@@ -124,6 +124,9 @@ main {
 
     &__img {
         width: 0.7em;
+        & > img {
+            color: transparent;
+        }
     }
 
     &__stay {

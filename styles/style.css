@@ -693,6 +693,9 @@ main {
 .logo__img {
   width: 0.7em;
 }
+.logo__img > img {
+  color: transparent;
+}
 .logo__stay {
   font-weight: bold;
 }
