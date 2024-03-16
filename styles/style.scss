@@ -441,7 +441,7 @@ main {
 
 .music {
     background-color: rgb(83, 79, 79);
-    height: 800px;
+    height: 100%;
     &__inner {
         background-color: rgb(83, 79, 79);
     }
@@ -495,14 +495,18 @@ main {
         text-align: center;
         flex-basis: 100%;
         padding-top: 30px;
+        padding-bottom: 30px;
     }
 }
 
 .footer {
-    height: 250px;
+    height: 100%;
+    width: 100%;
     background-color: $cWhite;
     padding: 60px 0;
     @extend .content-width;
+    z-index: 10;
+    
 
     &__nav {
         @extend .flex;
