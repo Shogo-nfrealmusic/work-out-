@@ -299,15 +299,13 @@ main {
 
     &__inner {
         @extend .flex;
+        border-bottom: 5px solid;
+        border-color: $cWhite;
         @include mq(md) {
             flex-direction: row-reverse;
         }
     }
 
-    &__title {
-        margin-bottom: 60px;
-        text-decoration: underline;
-    }
 
     &__img {
         @extend .pb-sm;
@@ -339,6 +337,8 @@ main {
     &__title {
         color: $cWhite;
         font-size: 40px;
+        margin-bottom: 60px;
+        text-decoration: underline;
     }
 
     &__sub {
@@ -352,6 +352,75 @@ main {
         @include mq(lg) {
             margin-bottom: 20px;
         }
+    }
+}
+
+.supple {
+    @extend .content-width;
+    background-color: $cBlack;
+
+    &__inner {
+        background-color: $cWhite;
+        padding: 15px;
+        align-items: centers;
+        text-align: center;
+        @include mq(md) {
+            padding: 0 50px;
+        }
+        @include mq(xl) {
+            padding: 0 150px;
+        }
+    }
+
+    &__item {
+        @extend .flex;
+        border-bottom: 3px solid;
+        border-color: $cBlack;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+    }
+
+    &__img {
+        height: 200px;
+        width: 200px;
+        @include mq(md) {
+            flex-basis: 50%;
+        }
+        & > img {
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    
+    
+
+    &__texts {
+        @extend .pb-sm;
+        @include mq(md) {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 50%;
+            align-items: center;
+        }
+    }
+     
+
+    &__title1 {
+        color:$cWhite;
+        font-size: 40px;
+        text-align: center;
+        margin-bottom: 100px;
+    }
+
+    &__title {
+        color: red;
+        margin-bottom: 10px;
+    }
+
+    &__description {
+        font-weight: bold;
     }
 }
 
