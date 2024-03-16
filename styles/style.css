@@ -528,10 +528,6 @@ img {
   }
 }
 
-.purple {
-  color: #3b9294;
-}
-
 .font-sm, .sub-title {
   font-size: 14px;
 }
@@ -861,6 +857,7 @@ main {
 .home__sub {
   color: white;
   font-size: 35px;
+  font-weight: bold;
 }
 .home__description {
   color: white;
@@ -916,6 +913,7 @@ main {
 .work__sub {
   color: white;
   font-size: 35px;
+  font-weight: bold;
 }
 .work__description {
   color: white;
