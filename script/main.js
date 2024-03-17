@@ -1,23 +1,37 @@
-document.addEventListener('DOMContentLoaded', function() {
-
-    new MobileMenu;
-
-    new Main;
-});
-
 class Main {
+
+    _observers = [];
+
     constructor() {
         this.header = document.querySelector('.header');
-        this._observers = [];
-        this._scrollInit();
+        this._init();
+    }
+
+    _init() {
+        new MobileMenu;
+        Pace.on('done', this._scrollInit.bind(this));
+    }
+
+    destroy() {
+        this._observers.forEach(so => so.destroy());
     }
 
     _scrollInit() {
         this._observers.push(
-            new ScrollObserver('.nav-trigger', this._navAnimation.bind(this), {once:false}),
+            new ScrollObserver('.nav-trigger', this._navAnimation.bind(this), { once: false }),
             new ScrollObserver('.cover-slide', this._inviewAnimation),
+            new ScrollObserver('.appear', this._inviewAnimation),
             new ScrollObserver('.tween-animate-title', this._textAnimation)
         )
+        console.log(this._observers);
+    }
+
+    _toggleSlideAnimation(el, inview) {
+        if(inview) {
+            this.hero.start();
+        } else {
+            this.hero.stop();
+        }
     }
 
     _textAnimation(el, inview) {
@@ -27,13 +41,14 @@ class Main {
         }
     }
 
-    _navAnimation(el , inview) {
+    _navAnimation(el, inview) {
         if(inview) {
             this.header.classList.remove('triggered');
         } else {
             this.header.classList.add('triggered');
         }
     }
+
 
     _inviewAnimation(el, inview) {
         if(inview) {
@@ -43,3 +58,4 @@ class Main {
         }
     }
 }
+const main = new Main;
