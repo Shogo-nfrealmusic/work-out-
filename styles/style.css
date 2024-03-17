@@ -1073,9 +1073,6 @@ main {
   color: #535353;
   text-decoration: none;
 }
-.footer__copyright {
-  padding-right: 5px;
-}
 .footer > .logo {
   justify-content: center;
   padding-bottom: 30px;
