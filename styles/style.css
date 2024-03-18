@@ -1069,6 +1069,9 @@ main {
   color: #535353;
   text-decoration: none;
 }
+.footer__li:nth-child(5) {
+  background-color: red;
+}
 .footer > .logo {
   justify-content: center;
   padding-bottom: 30px;
