@@ -540,13 +540,9 @@ main {
         }
 
         &:nth-child(5) {
-            background-color: red;
+            text-decoration: underline;
         }
     }
-
-    // &__copyright {
-    //     // padding-right: 5px;
-    // }
 
     & > .logo {
         justify-content: center;

@@ -1070,7 +1070,7 @@ main {
   text-decoration: none;
 }
 .footer__li:nth-child(5) {
-  background-color: red;
+  text-decoration: underline;
 }
 .footer > .logo {
   justify-content: center;
