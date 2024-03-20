@@ -259,6 +259,9 @@ main {
     }
 
     &__title {
+        @include mq(ss) {
+            margin-bottom: 30px;
+        }
         margin-bottom: 60px;
         text-decoration: underline;
     }
@@ -285,6 +288,7 @@ main {
 
     &__texts {
         @extend .pb-sm;
+        width: 100%;
         @include mq(md) {
             display: flex;
             align-items: center;
@@ -293,6 +297,7 @@ main {
     }
 
     &__title {
+        padding-left: 15px;
         color: $cWhite;
         font-size: 40px;
     }
@@ -306,20 +311,32 @@ main {
     &__description {
         color: $cWhite;
         font-size: 20px;
+        @include mq(ss) {
+            padding-bottom: 10px;
+        }
         @include mq(lg) {
             margin-bottom: 40px;
         }
     }
 }
 
+.home__texts-inner {
+    @include mq(ss) {
+        text-align: center;
+        margin-right:10px;
+        margin-left:10px;
+        margin-bottom: 0;
+    }
+}
+
 .work {
     @extend .mb-lg;
     background-color: $cBlack;
+    border-bottom: 5px solid;
+    border-color: $cWhite;
 
     &__inner {
         @extend .flex;
-        border-bottom: 5px solid;
-        border-color: $cWhite;
         @include mq(md) {
             flex-direction: row-reverse;
         }
@@ -345,6 +362,7 @@ main {
 
     &__texts {
         @extend .pb-sm;
+        width: 100%;
         @include mq(md) {
             display: flex;
             align-items: center;
@@ -354,7 +372,11 @@ main {
     }
 
     &__title {
+        @include mq(ss) {
+            margin-bottom: 30px;
+        }
         color: $cWhite;
+        padding-left: 15px;
         font-size: 40px;
         margin-bottom: 60px;
         text-decoration: underline;
@@ -369,9 +391,20 @@ main {
     &__description {
         color: $cWhite;
         font-size: 20px;
+        @include mq(ss) {
+            padding-bottom: 10px;
+        }
         @include mq(lg) {
             margin-bottom: 20px;
         }
+    }
+}
+
+.work__texts-inner {
+    @include mq(ss) {
+        text-align: center;
+        margin-right:10px;
+        margin-left:10px;
     }
 }
 
@@ -394,6 +427,7 @@ main {
 
     &__item {
         @extend .flex;
+        padding-top: 5px;
         border-bottom: 3px solid;
         border-color: $cBlack;
         justify-content: space-between;
@@ -418,6 +452,7 @@ main {
 
     &__texts {
         @extend .pb-sm;
+        @extend .font-md;
         @include mq(md) {
             display: flex;
             flex-direction: column;
