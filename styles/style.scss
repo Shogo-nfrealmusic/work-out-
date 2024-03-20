@@ -19,6 +19,10 @@ body {
       
 }
 
+.border {
+    border-bottom: 5px solid $cWhite;
+}
+
 #main-content {
     position: relative;
     z-index: 0;
@@ -331,8 +335,8 @@ main {
 
 .work {
     @extend .mb-lg;
-    background-color: $cBlack;
-    border-bottom: 5px solid;
+    // background-color: $cBlack;
+    // border-bottom: 5px solid;
     border-color: $cWhite;
 
     &__inner {
@@ -467,6 +471,7 @@ main {
         font-size: 40px;
         text-align: center;
         margin-bottom: 100px;
+        margin-top: 20px;
     }
 
     &__title {
